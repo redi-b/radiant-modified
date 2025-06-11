@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-sans: Switzer, system-ui, sans-serif;
+
+  --radius-4xl: 2rem;
+
+  --color-card-50: #e5e5e5;
+  --color-card-100: #bfbfbf;
+  --color-card-200: #8f8f8f;
+  --color-card-300: #5f5f5f;
+  --color-card-400: #3a3a3a;
+  --color-card-500: #151515;
+  --color-card-600: #121212;
+  --color-card-700: #0f0f0f;
+  --color-card-800: #0b0b0b;
+  --color-card-900: #080808;
+}
+
+@keyframes move-x {
+  0% {
+    transform: translateX(var(--move-x-from));
+  }
+
+  100% {
+    transform: translateX(var(--move-x-to));
+  }
+}
