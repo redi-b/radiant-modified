@@ -1,5 +1,6 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +27,7 @@ export default function RootLayout({
           title="The Radiant Blog"
           href="/blog/feed.xml"
         />
-        <script src="/theme.js" />
+        <Script src="/theme.js" strategy="beforeInteractive" />
       </head>
       <body className="bg-gradient-to-b from-white from-50% to-white text-gray-950 antialiased transition-colors duration-300 ease-in-out dark:bg-gradient-to-b dark:from-neutral-950 dark:from-50% dark:to-neutral-900">
         {children}
